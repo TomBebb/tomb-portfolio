@@ -33,9 +33,9 @@ export default function Home() {
       <p className="mb-5">
         I am a full-stack developer currently looking for new opportunities at another workplace.
       </p>
-      <button className="btn btn-primary">
+      <Link href="mailto:tophattedcoder@gmail.com" className="btn btn-primary">
         Contact Me
-      </button>
+      </Link>
     </Hero>
     <div className="grid md:grid-cols-12 grid-cols-4">
       {myNavItems
