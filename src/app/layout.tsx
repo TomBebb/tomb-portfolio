@@ -1,12 +1,10 @@
 "use client"
 import './globals.css'
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar'
 import { useMemo } from 'react'
 import { usePathname } from 'next/navigation'
 import { NavItem, navItems } from './nav'
-import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,13 +19,19 @@ export default function RootLayout({
     () => navItems.find(ni => path === ni.pathname), [path])
 
   const currMenuTitle = useMemo(() => currMenuItem?.name ?? "", [currMenuItem])
+  const fullTitle = useMemo(() => currMenuTitle + " - Portfolio", [currMenuTitle])
   return (
     <html lang="en">
+      <head>
+        <title>
+          {fullTitle}
+        </title>
+      </head>
       <body className={inter.className}>
         <Navbar
-        navTitle={currMenuTitle}
-         curr={currMenuItem}
-         />
+          navTitle={currMenuTitle}
+          curr={currMenuItem}
+        />
 
         {children}
       </body>
