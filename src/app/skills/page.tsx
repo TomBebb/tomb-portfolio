@@ -30,17 +30,17 @@ interface MappedSkills {
     type: SkillType
     skills: Skill[]
 }
-export default function () {
+export default function SkillsPager() {
     const mapped = useMemo<MappedSkills[]>(() => (skillTypes)
         .map(v => ({ type: v, skills: mySkills.filter(s => s.type === v) })), [mySkills, skillTypes])
     return <div>
-        {mapped.map(s => <div>
+        {mapped.map(s => <div key={s.type}>
             <div className="font-bold text-xl">
                 {skillTypeNames[s.type]}
             </div>
             <div>
                 {s.skills.map(s => (
-                    <div>
+                    <div key={s.name}>
                         <span className="font-bold">{s.name}</span> - {s.desc}
                     </div>
                 ))}

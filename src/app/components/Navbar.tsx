@@ -11,7 +11,7 @@ export interface NavbarItemProps {
   currPath: string
 }
 function NavbarItem({ item: ni, currPath }: NavbarItemProps) {
-  const isActive = useMemo(() =>currPath === ni.pathname , [currPath, ni])
+  const isActive = useMemo(() => currPath === ni.pathname, [currPath, ni])
   return <li className={isActive ? "disabled" : ""}>
     {ni.children?.length ?
 
@@ -22,6 +22,7 @@ function NavbarItem({ item: ni, currPath }: NavbarItemProps) {
         </summary>
         <ul className="p-2 bg-base-100">
           {ni.children.map(v => <NavbarItem
+            key={v.pathname}
             currPath={currPath}
             item={v}
           />)}
@@ -46,9 +47,9 @@ export default function Navbar({ navTitle, ...props }: NavbarProps) {
     <div className="flex-none">
       <ul className="menu menu-horizontal px-1">
         {navItems.map(ni => <NavbarItem
-        key={ni.pathname}
+          key={ni.pathname}
           item={ni}
-          currPath={props.curr?.pathname ??"" }
+          currPath={props.curr?.pathname ?? ""}
         />)}
       </ul>
     </div>

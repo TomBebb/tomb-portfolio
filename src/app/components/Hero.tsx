@@ -4,7 +4,7 @@ export interface HeroProps {
     children: JSX.Element | JSX.Element[] | string
     className?: string
 }
-export default function (props: HeroProps) {
+export default function Hero(props: HeroProps) {
 
     return <div
         className={"hero w-full h-full "+props.className}
