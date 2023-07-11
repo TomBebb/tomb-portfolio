@@ -22,15 +22,15 @@ export default function RootLayout({
 
   const currMenuTitle = useMemo(() => currMenuItem?.name ?? "", [currMenuItem])
   return (
-    <div>
-      <Head>
-      </Head>
+    <html lang="en">
+      <body className={inter.className}>
         <Navbar
         navTitle={currMenuTitle}
          curr={currMenuItem}
          />
 
         {children}
-        </div>
+      </body>
+    </html>
   )
 }
