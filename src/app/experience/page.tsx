@@ -39,7 +39,7 @@ const jobDetailCols: AutoTableColumn<FullJobDetail>[] = [
         key: "active",
         name: "Active",
         type: "statusIcon",
-
+        align: "right"
     }
 ]
 

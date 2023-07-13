@@ -13,7 +13,7 @@ export default function GenericDisplay<T extends GenericType = GenericType>(prop
 
     switch (ty) {
         case "icon":
-            return <Icon icon={props.value} />
+            return <Icon icon={props.value as string} />
         case "statusIcon":
             return <Icon icon={props.value ? "mdi:checkbox-marked" : "mdi:checkbox-blank"} />
 

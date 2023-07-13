@@ -19,7 +19,11 @@ export default function AutoTable<T extends object>({columns, rows}: AutoTablePr
       {/* head */}
       <thead>
         <tr>
-          {columns.map(c => <th key={c.key as any}>
+          {columns.map(c => <th 
+          key={c.key as any}
+        
+          className={"text-"+c.align}
+          >
             {c.name}
           </th>)}
         </tr>
@@ -28,7 +32,11 @@ export default function AutoTable<T extends object>({columns, rows}: AutoTablePr
 
         {rows.map((r, ri) => <tr key={ri}>
             
-          {columns.map(c => <td key={c.key as any}>
+          {columns.map(c => <td
+          key={c.key as any}
+          style={{"float": c.align as any}}
+          className={" text-"+c.align}
+          >
             <GenericDisplay
               type={c.type}
               value={r[c.key]}
