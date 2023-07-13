@@ -15,6 +15,11 @@ export const navItems: NavItem[] = [
         icon: <Icon icon="mdi:home"/>,
     },
     {
+        name: "Education",
+        pathname: "/education",
+        desc: "View my qualifications"
+    },
+    {
         name: "Experience",
         pathname: "/experience",
         desc: "View my jobs"
