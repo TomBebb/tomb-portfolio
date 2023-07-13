@@ -26,7 +26,12 @@ const JobDetails: JobDetails[] =[
         name: "Astra Telematics",
         job: "Apprentice Software Developer",
         role: "Software Developer"
-    }
+    },
+    {
+        name: "Yellowgrid Limited",
+        job: "DevOps Engineer",
+        role: "Full-Stack Developer",
+    },
 ]
 export default function Exp() {
     return (
