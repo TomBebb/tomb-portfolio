@@ -29,6 +29,9 @@ export default function Home() {
     <Hero
       title="Welcome"
     >
+      <span className="text-xl">
+          This is Tom Bebbington's portfolio
+      </span>
 
       <p className="mb-5">
         I am a full-stack developer currently looking for new opportunities at another workplace.
