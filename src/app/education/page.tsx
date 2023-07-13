@@ -31,7 +31,7 @@ const qualificationCols: AutoTableColumn<Qualification>[] = [
 
 const qualifications: Qualification[] = [
     {
-        name: "DevOps ",
+        name: "DevOps Engineer",
         level: 4,
         grade: "A",
         date: new Date(2017, 6, 10)
