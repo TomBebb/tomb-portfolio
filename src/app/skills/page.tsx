@@ -1,5 +1,6 @@
 import { useMemo } from "react"
 
+
 type SkillType =
     | 'lang'
     | 'devops'
@@ -9,7 +10,6 @@ interface Skill {
     type: SkillType
     name: string
     desc: string
-
 }
 const skillTypeNames: Record<SkillType, string> = {
     lang: "Programming Languages",
