@@ -1,7 +1,12 @@
+import { GenericType } from "../generic"
+import GenericDisplay from "./GenericDisplay"
+
+
 export interface AutoTableColumn<T> {
     key: keyof T
     name: string
     align?: "center" | "left" | "right"
+    type?: GenericType
 }
 export interface AutoTableProps<T extends object> {
     columns: AutoTableColumn<T>[],
@@ -24,7 +29,10 @@ export default function AutoTable<T extends object>({columns, rows}: AutoTablePr
         {rows.map((r, ri) => <tr key={ri}>
             
           {columns.map(c => <td key={c.key as any}>
-            {r[c.key]}
+            <GenericDisplay
+              type={c.type}
+              value={r[c.key]}
+            />
           </td>)}
         </tr>)}
         {/* row 1 */}
