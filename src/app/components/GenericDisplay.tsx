@@ -15,7 +15,9 @@ export default function GenericDisplay<T extends GenericType = GenericType>(prop
         case "icon":
             return <Icon icon={props.value as string} />
         case "statusIcon":
-            return <Icon icon={props.value ? "mdi:checkbox-marked" : "mdi:checkbox-blank"} />
+            return <Icon 
+            className={props.value ? "text-green-600" :  "text-red-600"}
+            icon={props.value ? "mdi:checkbox-marked" : "mdi:checkbox-blank"} />
 
         case "date":
             return <>{(props.value as Date)?.toLocaleDateString()}</>

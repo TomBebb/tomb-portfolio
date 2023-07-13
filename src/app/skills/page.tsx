@@ -1,6 +1,5 @@
 import { useMemo } from "react"
 
-
 type SkillType =
     | 'lang'
     | 'devops'
