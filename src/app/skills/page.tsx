@@ -3,7 +3,9 @@ import { useMemo } from "react"
 type SkillType =
     | 'lang'
     | 'devops'
+    | 'data'
     | 'tool'
+    | 'fw'
     | 'ui'
 
 interface Skill {
@@ -17,6 +19,8 @@ const skillTypeNames: Record<SkillType, string> = {
     devops: "Dev-Ops CI/CD Tools",
     tool: "Tools",
     ui: "UI Frameworks",
+    fw: "Frameworks",
+    data: "Database",
 }
 const skillTypes: SkillType[] = Object.keys(skillTypeNames) as SkillType[];
 
@@ -58,7 +62,36 @@ const mySkills: Skill[] = [
         name: "React",
         desc: "I adapted my Typescript knowledge for the difference and learnt the different hooks.\n"+
         "Used in a an alpha NextJS app, a NextJS app, and an internal component/utility NPM library.",
-    }
+    },
+
+    {
+        company: "Yellowgrid",
+        type: "fw",
+        name: "NextJS",
+        desc: "Used for a couple of applications, including heavy-duty APIs.",
+    },
+    {
+        company: "Yellowgrid",
+        type: "fw",
+        name: "ASP .NET Core",
+        desc: "Used for a low-latency realtime telephony stats API consumed by a React frontend." + 
+        " I made sure to cache as much as possible to avoid improve speed. \n"+
+        "Used SQLite since this was an embedded application, which used an ORM library Linq2Db.\n" +
+        "I also setup REST endpoints using its MVC architecture.",
+    },
+
+    {
+        company: "Yellowgrid",
+        type: "data",
+        name: "MariaDB / MySQL",
+        desc: "Used to store users, etc for an internal NextJS API that used ",
+    },
+    {
+        company: "Yellowgrid",
+        type: "data",
+        name: "SQLite",
+        desc: "Used to store telephony data used for stats in main C# / ASP .NET Core project",
+    },
 
 ]
 
