@@ -103,13 +103,13 @@ export default function SkillsPager() {
     const mapped = useMemo<MappedSkills[]>(() => (skillTypes)
         .map(v => ({ type: v, skills: mySkills.filter(s => s.type === v) })), [mySkills, skillTypes])
     return <dl>
-        {mapped.map(s => <div key={s.type}>
+        {mapped.map(s => <div key={s.type} className="p-4">
             <dt className="font-bold text-xl">
                 {skillTypeNames[s.type]}
             </dt>
             <dd>
                 {s.skills.map(s => (
-                    <div key={s.name}>
+                    <div key={s.name} className="m-3">
                         <span className="font-bold">
                             {s.name}
                         </span>
