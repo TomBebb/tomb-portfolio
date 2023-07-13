@@ -1,5 +1,6 @@
 import { useMemo } from "react"
 import { NavItem, navItems } from "../nav"
+import { Icon } from "@iconify/react"
 
 export interface NavbarProps {
   curr?: NavItem
@@ -51,6 +52,14 @@ export default function Navbar({ navTitle, ...props }: NavbarProps) {
           item={ni}
           currPath={props.curr?.pathname ?? ""}
         />)}
+
+        <a
+          href="https://github.com/TomBebb/tomb-portfolio"
+          className="btn btn-primary"
+        >
+          <Icon icon="mdi:github" />
+          View Source
+        </a>
       </ul>
     </div>
   </div>
