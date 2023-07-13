@@ -17,16 +17,19 @@ export const navItems: NavItem[] = [
     {
         name: "Education",
         pathname: "/education",
-        desc: "View my qualifications"
+        desc: "View my qualifications",
+        icon: <Icon icon="mdi:school"/>,
     },
     {
         name: "Experience",
         pathname: "/experience",
-        desc: "View my jobs"
+        desc: "View my jobs",
+        icon: <Icon icon="mdi:briefcase"/>,
     },
     {
         name: "Skills",
         pathname: "/skills",
-        desc: "View my skills"
+        desc: "View my skills",
+        icon: <Icon icon="mdi:brain"/>,
     }
 ]
